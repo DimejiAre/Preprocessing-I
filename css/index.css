@@ -165,7 +165,7 @@ body {
 }
 @media (max-width: 500px) {
   :root {
-    font-size: 150%;
+    font-size: 120%;
   }
 }
 h1 {
@@ -192,9 +192,24 @@ h3 {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 500px) {
+  .container .page-header .page-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .container .page-header .page-navigation a {
   text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  .container .page-header .page-navigation a {
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
 }
 .container .main-content {
   display: flex;
@@ -263,7 +278,7 @@ h3 {
 }
 @media (max-width: 500px) {
   .container .work-history {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 .container .work-history .row {
