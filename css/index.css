@@ -134,3 +134,103 @@ html,
 body {
   height: 100%;
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+}
+.center {
+  margin: 0 auto;
+}
+:root {
+  font-size: 100%;
+}
+h1 {
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+h3 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.container {
+  padding: 0 2rem;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.page-header {
+  padding: 1rem;
+}
+.page-header .page-navigation {
+  display: flex;
+  justify-content: space-evenly;
+}
+.page-header .page-navigation a {
+  text-decoration: none;
+  color: black;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+.page-banner {
+  padding: 2rem;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black;
+}
+.about .introduction {
+  width: 48%;
+}
+.about .skills {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.about .skills ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .skills li {
+  width: 100%;
+  border: 1px solid black;
+}
+.work-history {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black;
+}
+.work-history .row {
+  border-top: 1px black solid;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact {
+  padding: 2rem 0;
+  border-bottom: 1px solid black;
+}
+.page-footer {
+  background-color: gray;
+  display: flex;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
