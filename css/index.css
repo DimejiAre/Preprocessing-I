@@ -134,6 +134,21 @@ html,
 body {
   height: 100%;
 }
+/* Custom LESS syntax */
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Play Regular'), local('Play-Regular'), url(https://fonts.gstatic.com/s/play/v11/6aez4K2oVqwIvtU2Gg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Work Sans'), local('WorkSans-Regular'), url(https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDs.ttf) format('truetype');
+}
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -146,12 +161,20 @@ body {
 }
 :root {
   font-size: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 150%;
+  }
 }
 h1 {
+  font-family: 'Play', sans-serif;
   font-size: 3rem;
   padding: 1rem 0;
 }
 h3 {
+  font-family: 'Play', sans-serif;
   font-size: 1.5rem;
   padding: 1rem 0;
 }
@@ -162,22 +185,22 @@ h3 {
   flex-direction: column;
   margin: 0 auto;
 }
-.page-header {
+.container .page-header {
   padding: 1rem;
 }
-.page-header .page-navigation {
+.container .page-header .page-navigation {
   display: flex;
   justify-content: space-evenly;
 }
-.page-header .page-navigation a {
+.container .page-header .page-navigation a {
   text-decoration: none;
   color: black;
 }
-.main-content {
+.container .main-content {
   display: flex;
   flex-direction: column;
 }
-.page-banner {
+.container .page-banner {
   padding: 2rem;
   background-color: whitesmoke;
   display: flex;
@@ -186,31 +209,51 @@ h3 {
   align-items: center;
   border-bottom: 1px solid black;
 }
-.about {
+.container .about {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid black;
 }
-.about .introduction {
+@media (max-width: 500px) {
+  .container .about {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .about .introduction {
   width: 48%;
 }
-.about .skills {
+@media (max-width: 500px) {
+  .container .about .introduction {
+    width: initial;
+  }
+}
+.container .about .skills {
   width: 48%;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid black;
 }
-.about .skills ul {
+@media (max-width: 500px) {
+  .container .about .skills {
+    width: initial;
+  }
+}
+.container .about .skills ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about .skills li {
+.container .about .skills li {
+  padding: 1rem;
   width: 100%;
   border: 1px solid black;
+  border-bottom: 0;
+  text-align: center;
 }
-.work-history {
+.container .work-history {
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -218,16 +261,28 @@ h3 {
   padding-bottom: 2rem;
   border-bottom: 1px solid black;
 }
-.work-history .row {
-  border-top: 1px black solid;
-  display: flex;
-  justify-content: space-evenly;
+@media (max-width: 500px) {
+  .container .work-history {
+    font-size: 60%;
+  }
 }
-.contact {
+.container .work-history .row {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.container .work-history .row p {
+  width: 15%;
+}
+.container .contact {
   padding: 2rem 0;
   border-bottom: 1px solid black;
 }
-.page-footer {
+.container .contact p {
+  padding: 0.5rem 0;
+}
+.container .page-footer {
   background-color: gray;
   display: flex;
   padding: 1rem 0;
